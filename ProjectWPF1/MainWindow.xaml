@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="300"
         ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="Button_Book" Content="Книги" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Width="150" Height="50"/>
+        <Button x:Name="Button_Book" Content="Книги" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Book_Click"/>
         <Button x:Name="Button_Genre" Content="Жанры" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Genre_Click"/>
         <Button x:Name="Button_Author" Content="Авторы" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Author_Click"/>
     </Grid>

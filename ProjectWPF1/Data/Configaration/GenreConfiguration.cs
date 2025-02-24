@@ -11,6 +11,7 @@ public class GenreConfiguration : IEntityTypeConfiguration<Genre>
         builder.HasKey(g => g.Id);
 
         builder.HasMany(g => g.Books)
-               .WithOne(b => b.Genre);
+               .WithOne(b => b.Genre)
+               .OnDelete(DeleteBehavior.Cascade);
     }
 }

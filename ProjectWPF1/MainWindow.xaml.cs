@@ -37,5 +37,11 @@ namespace ProjectWPF1
             var authorWindow = _serviceProvider.GetRequiredService<AuthorWindow>();
             authorWindow.Show();
         }
+
+        private void Button_Book_Click(object sender, RoutedEventArgs e)
+        {
+            var bookWindow = _serviceProvider.GetRequiredService<BookWindow>();
+            bookWindow.Show();
+        }
     }
 }

@@ -11,6 +11,7 @@ public class AuthorConfiguration : IEntityTypeConfiguration<Author>
         builder.HasKey(a => a.Id);
 
         builder.HasMany(a => a.Books)
-               .WithOne(b => b.Author);
+               .WithOne(b => b.Author)
+               .OnDelete(DeleteBehavior.Cascade);
     }
 }

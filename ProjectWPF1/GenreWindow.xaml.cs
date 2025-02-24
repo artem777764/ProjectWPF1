@@ -46,9 +46,9 @@ namespace ProjectWPF1
             string name = TextBox_Name.Text;
             string description = TextBox_Description.Text;
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description))
+            if (string.IsNullOrWhiteSpace(name))
             {
-                MessageBox.Show("Название и Описание должны быть заполнены!");
+                MessageBox.Show("Название должно быть заполнено!");
                 return;
             }
 
@@ -69,9 +69,9 @@ namespace ProjectWPF1
             string description = TextBox_Description.Text;
             string idString = TextBox_Id.Text;
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(idString))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(idString))
             {
-                MessageBox.Show("Название, Описание и Id должны быть заполнены!");
+                MessageBox.Show("Название и Id должны быть заполнены!");
                 return;
             }
 

@@ -50,10 +50,9 @@ namespace ProjectWPF1
             string birthday = TextBox_Birthday.Text;
             string country = TextBox_Country.Text;
 
-            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName)
-                || string.IsNullOrWhiteSpace(birthday) || string.IsNullOrWhiteSpace(country))
+            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
             {
-                MessageBox.Show("Имя, Фамилия, Дата Рождения и Страна должны быть заполнены!");
+                MessageBox.Show("Имя и Фамилия должны быть заполнены!");
                 return;
             }
 
@@ -80,10 +79,9 @@ namespace ProjectWPF1
             string idString = TextBox_Id.Text;
 
             if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName)
-                || string.IsNullOrWhiteSpace(birthday) || string.IsNullOrWhiteSpace(country)
                 || string.IsNullOrWhiteSpace(idString))
             {
-                MessageBox.Show("Имя, Фамилия, Дата Рождения, Страна и Id должны быть заполнены!");
+                MessageBox.Show("Имя, Фамилия и Id должны быть заполнены!");
                 return;
             }
 

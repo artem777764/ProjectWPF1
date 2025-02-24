@@ -20,20 +20,18 @@ namespace ProjectWPF1
 
         private void ConfigureServices(IServiceCollection services)
         {
-            // Подключение к PostgreSQL
             string connectionString = "Host=localhost;Port=5432;Database=WPFDbProject1;Username=postgres;Password=12345";
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseNpgsql(connectionString));
 
-            // Регистрация CRUD-сервиса
-            //services.AddScoped<ProductService>();
-
-            // Регистрация главного окна
             services.AddTransient<AuthorService>();
+            services.AddTransient<BookService>();
             services.AddTransient<GenreService>();
 
             services.AddSingleton<MainWindow>();
+
             services.AddTransient<AuthorWindow>();
+            services.AddTransient<BookWindow>();
             services.AddTransient<GenreWindow>();
         }
 
