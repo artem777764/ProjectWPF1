@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,26 @@ using System.Windows.Shapes;
 
 namespace ProjectWPF1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IServiceProvider _serviceProvider;
+
+        public MainWindow(IServiceProvider serviceProvider)
         {
+            _serviceProvider = serviceProvider;
             InitializeComponent();
+        }
+
+        private void Button_Genre_Click(object sender, RoutedEventArgs e)
+        {
+            var genreWindow = _serviceProvider.GetRequiredService<GenreWindow>();
+            genreWindow.Show();
+        }
+
+        private void Button_Author_Click(object sender, RoutedEventArgs e)
+        {
+            var authorWindow = _serviceProvider.GetRequiredService<AuthorWindow>();
+            authorWindow.Show();
         }
     }
 }

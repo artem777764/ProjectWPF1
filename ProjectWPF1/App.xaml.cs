@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
+using ProjectWPF1.Services;
 
 namespace ProjectWPF1
 {
@@ -28,7 +29,12 @@ namespace ProjectWPF1
             //services.AddScoped<ProductService>();
 
             // Регистрация главного окна
+            services.AddTransient<AuthorService>();
+            services.AddTransient<GenreService>();
+
             services.AddSingleton<MainWindow>();
+            services.AddTransient<AuthorWindow>();
+            services.AddTransient<GenreWindow>();
         }
 
         protected override void OnStartup(StartupEventArgs e)
